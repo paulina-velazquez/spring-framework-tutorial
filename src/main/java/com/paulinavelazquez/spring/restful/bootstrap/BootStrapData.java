@@ -1,9 +1,12 @@
 package com.paulinavelazquez.spring.restful.bootstrap;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.paulinavelazquez.spring.restful.domain.Customer;
 import com.paulinavelazquez.spring.restful.repositories.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.io.File;
 
 @Component
 public class BootStrapData implements CommandLineRunner {
@@ -16,6 +19,7 @@ public class BootStrapData implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+
 
         Customer c1 = new Customer();
         c1.setFirstName("Paulina");
@@ -33,5 +37,6 @@ public class BootStrapData implements CommandLineRunner {
         customerRepository.save(c3);
 
         System.out.println("Customers Saved: " + customerRepository.count());
+        System.out.println("Customers: " + c1 + c2 + c3);
     }
 }

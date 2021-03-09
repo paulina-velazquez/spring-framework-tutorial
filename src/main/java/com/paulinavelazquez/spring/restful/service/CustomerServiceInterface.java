@@ -4,7 +4,8 @@ import com.paulinavelazquez.spring.restful.domain.Customer;
 
 import java.util.List;
 
-public interface CustomerService {
+// added Interface at end of name. Delete after done
+public interface CustomerServiceInterface {
     Customer findCustomerById(Long id);
     List<Customer> findAllCustomers();
     Customer saveCustomer(Customer customer);
